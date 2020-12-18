@@ -135,11 +135,6 @@ let workoutSeed = [
   }
 ];
 
-require('mongoose').connect('mongodb://localhost/workout_db', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-
 db.Workout.deleteMany({})
   .then(() => db.Workout.collection.insertMany(workoutSeed))
   .then(data => {
