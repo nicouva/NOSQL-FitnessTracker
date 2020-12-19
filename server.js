@@ -9,6 +9,8 @@ app.use(express.json())
 
 mongoose.connect("mongodb://localhost/workout_db", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false
 })
 
